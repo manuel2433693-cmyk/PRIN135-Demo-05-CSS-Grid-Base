@@ -1,4 +1,3 @@
-
 /* grid */
 .grid {
     display: grid;
@@ -9,15 +8,15 @@
 }
 
 .grid-columns {
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 100px 100px 100px;
 }
 
 .grid-rows {
-    grid-template-rows: 50px 50px 50px;
+    grid-template-rows: 60px 60px 60px;
 }
 
 .grid-template {
-    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-template: repeat(3, 60px) / repeat(3, 150px);
 }
 
 .non-fraction {
@@ -25,7 +24,7 @@
 }
 
 .fraction {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 .grid-template-repeat {
@@ -40,7 +39,7 @@
 /* grid-template-area */
 #grid-template-area {
     display: grid;
-    grid-template-columns: 180px 1fr 140px;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header header header"
@@ -78,7 +77,7 @@
 .grid-ji {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 50px);
+    grid-template-rows: 100px;
 }
 
 .ji-start {
@@ -118,7 +117,7 @@
 .grid-jc {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(2, 50px);
+    grid-template-rows: 100px;
     width: 100%;
 }
 
@@ -150,8 +149,8 @@
 .grid-ac {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(2, 50px);
-    height: 400px;
+    grid-template-rows: repeat(2, 80px);
+    height: 500px;
 }
 
 .ac-start {
@@ -181,7 +180,7 @@
 /* Justify Self */
 #justify-self {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 100px);
+    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
 
     .js-stretch {
@@ -204,7 +203,7 @@
 /* Align Self */
 #align-self {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 100px);
+    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
 
     .as-stretch {
