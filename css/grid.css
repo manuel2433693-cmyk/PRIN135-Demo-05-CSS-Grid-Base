@@ -40,7 +40,7 @@
 /* grid-template-area */
 #grid-template-area {
     display: grid;
-    grid-template-columns: 180px 1fr 140px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header header header"
@@ -180,8 +180,8 @@
 
 /* Justify Self */
 #justify-self {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 120px;
     gap: 10px;
 
     .js-stretch {
@@ -203,8 +203,8 @@
 
 /* Align Self */
 #align-self {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 120px;
     gap: 10px;
 
     .as-stretch {
