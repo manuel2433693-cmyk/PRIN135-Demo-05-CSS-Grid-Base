@@ -9,49 +9,48 @@
 }
 
 .grid-columns {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 200px 200px 200px;
 }
 
 .grid-rows {
-    grid-template-rows: 70px 70px 70px;
+    grid-template-rows: 50px 50px 50px;
 }
 
 .grid-template {
-    grid-template: repeat(3, 70px) / repeat(3, minmax(0, 1fr));
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
 
 .non-fraction {
-    grid-template-columns: 20% 30% 50%;
+    grid-template-columns: 100px 200px 300px;
 }
 
 .fraction {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .grid-template-repeat {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
 
 .grid-gap {
-    gap: 15px;
+    gap: 20px;
 }
 
 /* grid-template-area */
 #grid-template-area {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+    grid-template-columns: 180px 1fr 140px;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header header header"
         "sidebar content ads"
         "footer footer footer";
-    gap: 15px;
-    min-height: 420px;
+    gap: 10px;
+    min-height: 400px;
 
     .item {
         padding: 15px;
-        min-width: 0;
     }
 
     .header {
@@ -78,8 +77,8 @@
 /* Justify Items */
 .grid-ji {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: 110px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 50px);
 }
 
 .ji-start {
@@ -118,8 +117,8 @@
 /* Justify Content */
 .grid-jc {
     display: grid;
-    grid-template-columns: repeat(3, 90px);
-    grid-template-rows: 110px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 50px);
     width: 100%;
 }
 
@@ -150,9 +149,9 @@
 /* Align Content */
 .grid-ac {
     display: grid;
-    grid-template-columns: repeat(3, 90px);
-    grid-template-rows: repeat(2, 90px);
-    height: 480px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 50px);
+    height: 400px;
 }
 
 .ac-start {
@@ -181,9 +180,9 @@
 
 /* Justify Self */
 #justify-self {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
 
     .js-stretch {
         justify-self: stretch;
@@ -204,9 +203,9 @@
 
 /* Align Self */
 #align-self {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 100px);
-    gap: 15px;
+    gap: 10px;
 
     .as-stretch {
         align-self: stretch;
